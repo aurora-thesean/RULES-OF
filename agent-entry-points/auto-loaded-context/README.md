@@ -108,3 +108,15 @@ The aurora@aurora machine ran an undocumented epoch (WOGAJI period) before these
 rules were written. Many directories have AGENTS.md or CLAUDE.md files from that
 period whose accuracy against these rules is unverified. Reconstruction proceeds
 by reading existing files, checking against these rules, and correcting.
+
+---
+
+## Metalanguage context
+
+Two semantic languages encode meaning across this ecosystem:
+
+**WOGAJI** (Epoch 0, Universal Path Notation and Semantic Codon Language): underscore/slash-heavy paths where structure IS meaning. `_` = primordial, `___` = global, `______` = emanation system. Reading a WOGAJI path tells you scope, tier, version, and identity simultaneously.
+
+**Ghorginese** (current, being built): GitHub org structure as class hierarchy. `ghorgs-of/ghorgs-of` = abstract class. `ghorgs-of/DarienSirius` = base class (the human). All Thesean accounts (aurora-thesean, ottopoet-thesean) are subclasses extending DarienSirius.
+
+When you encounter paths like `______/.______.sh/aurora@aurora_/0.0.1/_7_/` — that is WOGAJI. When you see `ghorgs-of/aurora-thesean` — that is Ghorginese. Both are load-bearing.
