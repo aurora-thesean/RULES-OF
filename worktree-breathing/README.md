@@ -37,7 +37,7 @@ Each non-default account gets a named Host alias that overrides the identity fil
 # ~/.ssh/config
 
 Host github.com
-    IdentityFile ~/.ssh/id_ed25519_git
+    IdentityFile ~/.ssh/id_ed25519_github
     User git
 
 # Per-account aliases for multi-account pushes
@@ -71,7 +71,7 @@ gh auth switch --user DarienSirius
 gh api /user --jq .login
 ```
 
-PAT scopes required: `repo`, `gist`, `read:org`, `workflow`
+PAT scopes — `gh` minimum: `repo`, `read:org`, `gist`; additionally needed for aurora-thesean operations: `workflow`
 
 PAT lifetime: rolling — set expiry, rotate before expiry, ack rotation warning.
 
@@ -116,7 +116,7 @@ Before enrolling an account (requires the human — Niobe — to provide PAT):
 - [ ] Generate SSH keypair: `ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_{account} -C "{account}@aurora"`
 - [ ] Add public key to GitHub account (Settings → SSH keys)
 - [ ] Add SSH host alias to `~/.ssh/config`
-- [ ] Enroll PAT: `gh auth login --hostname github.com --with-token`
+- [ ] Enroll PAT: `echo "$PAT" | gh auth login --hostname github.com --with-token`
 - [ ] Verify: `gh auth switch --user {account} && gh api /user`
 - [ ] Note PAT expiry date — schedule rotation reminder
 
